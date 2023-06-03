@@ -1,0 +1,48 @@
+The OSI model ( Open Systems Interconnections Model ). It is a 7-layer architecture where all these 
+7 layers work collaboratively to transmit the data from one person to another across the globe.
+
+A sender goes from Application -> physical layer.
+A reciever goes from physical -> Application layer.
+
+_____________________________________________________________________________________________________________________________________________
+
+
+_____________________          Implemented in software. This layer produce the data, which has to be                         
+1. Application Layer           transferred over the network. Also acts as a gateway to access network.
+_____________________
+          |
+          V
+          
+_____________________         Comverts the message from application layer to machine code.
+2. Presentation Layer         Also compresses, encrypts, decrypts and translates the message.
+_____________________         
+          |
+          V
+ 
+_____________________         Sets up and manages the connections for the transmissions and later on
+3. Session Layer              terminates the connections. Authinticates and Authorizes.
+_____________________         
+          |
+          V
+
+_____________________         Data recieved from session layer will be distributed into 'segments' and 
+4. Transport Layer            will be transmitted, it also checks data loss.
+_____________________
+          |
+          V
+
+_____________________         Assigns the sender's and reciever's IP addresses to every segment and it
+5. Network Layer              forms an IP packet. It also takes care of packet routing and load balancing.
+_____________________
+          |
+          V
+
+_____________________        When a packet arrives in a network, the DataLink transmit it to the Host using  
+6. DataLink Layer            its MAC address. Responsible for node-node delivery of message.
+_____________________
+          |
+          V
+_____________________        Responsible for the actual physical connection between sender and reciever.
+7. Physical Layer            It is responsible for transmitting individual bits from one node to the next.
+_____________________
+          
