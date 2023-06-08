@@ -1,0 +1,40 @@
+TCP/IP was designed and developed by the Department of Defense (DoD) in the 1960s and is based on standard protocols. 
+It stands for Transmission Control Protocol/Internet Protocol. The TCP/IP model is a concise version of the OSI model.
+This model is the practical implementation of the theoritical OSI model.
+
+Session layer and Presentation layer comes under the Application layer in this model.
+
+3G, 4G, LTE are examples of implementations of TCP/IP model.
+__________________________________________________________________________________________________________________________________
+
+
+_____________________          Implemented in software. This layer produce the data, which has to be                         
+1. Application Layer           transferred over the network. Also acts as a gateway to access network.
+_____________________
+          |
+          V
+          
+_____________________         Comverts the message from application layer to machine code.
+2. Transport Layer            Also compresses, encrypts, decrypts and translates the message.
+_____________________         
+          |
+          V
+ 
+_____________________         Sets up and manages the connections for the transmissions and later on
+3. Network Layer              terminates the connections. Authinticates and Authorizes.
+_____________________         
+          |
+          V
+
+_____________________         Data recieved from session layer will be distributed into 'segments' and 
+4. DataLink Layer             will be transmitted, it also checks data loss.
+_____________________
+          |
+          V
+
+_____________________         Assigns the sender's and reciever's IP addresses to every segment and it
+5. Physical Layer             forms an IP packet. It also takes care of packet routing and load balancing.
+_____________________
+
+
+__________________________________________________________________________________________________________________________________
