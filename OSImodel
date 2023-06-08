@@ -4,7 +4,7 @@ The OSI model ( Open Systems Interconnections Model ). It is a 7-layer architect
 A sender goes from Application -> physical layer.
 A reciever goes from physical -> Application layer.
 
-_____________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________
 
 
 _____________________          Implemented in software. This layer produce the data, which has to be                         
@@ -46,3 +46,5 @@ _____________________        Responsible for the actual physical connection betw
 7. Physical Layer            It is responsible for transmitting individual bits from one node to the next.
 _____________________
           
+
+_________________________________________________________________________________________________________________________________
