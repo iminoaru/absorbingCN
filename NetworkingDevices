@@ -1,0 +1,88 @@
+1. REPEATER – 
+-  A repeater operates at the physical layer. 
+-  Its job is to regenerate the signal over the same network before the signal becomes too weak or corrupted to extend 
+   the length to which the signal can be transmitted over the same network. 
+-  Repeaters not only amplify the signal but also regenerate it. 
+-  When the signal becomes weak, they copy it bit by bit and regenerate it at its star topology connectors connecting following 
+   the original strength. 
+-  It is a 2-port device. 
+_______________________________________________________________________________________________________________________________________________________________
+
+2. HUB –  
+-  A hub is a basically multi-port repeater. 
+-  A hub connects multiple wires coming from different branches. Ex, the connector in star topology which connects different stations. 
+-  Hubs cannot filter data, so data packets are sent to all connected devices.  
+-  The collision domain of all hosts connected through Hub remains one.  
+-  They do not have the intelligence to find out the best path for data packets which leads to inefficiencies and wastage. 
+
+3 types of Hubs – 
+      1. Active Hub :- 
+         - These are the hubs that have their power supply and can clean, boost, and relay the signal along with the network. 
+         - It serves both as a repeater as well as a wiring center. These are used to extend the maximum distance between nodes.
+      2. Passive Hub :- 
+         - These are the hubs that collect wiring from nodes and power supply from the active hub. 
+         - These hubs relay signals onto the network without cleaning and boosting them and can’t be used to extend the distance between nodes.
+      3. Intelligent Hub :- 
+         - It works like an active hub and includes remote management capabilities. 
+         - They also provide flexible data rates to network devices. 
+         - It also enables an administrator to monitor the traffic passing through the hub and to configure each port in the hub.
+_______________________________________________________________________________________________________________________________________________________________
+
+3. BRIDGE – 
+-  A bridge operates at the data link layer. 
+-  A bridge is a repeater, with add on the functionality of filtering content by reading the MAC addresses of the source and destination. 
+-  It is also used for interconnecting two LANs working on the same protocol. 
+-  It has a single input and single output port, thus making it a 2 port device.
+
+2 types of Bridges –
+      1. Transparent Bridges :- 
+         - These are the bridge in which the stations are completely unaware of the bridge’s existence 
+           i.e. whether or not a bridge is added or deleted from the network, reconfiguration of the stations is unnecessary. 
+         - These bridges make use of two processes i.e. bridge forwarding and bridge learning.
+      2. Source Routing Bridges:- 
+         - In these bridges, routing operation is performed by the source station and the frame specifies which route to follow. 
+         - The host can discover the frame by sending a special frame called the discovery frame, which spreads through the entire 
+           network using all possible paths to the destination.
+_______________________________________________________________________________________________________________________________________________________________
+
+4. SWITCH – 
+-  A switch is a multiport bridge with a buffer and a design that can boost its efficiency and performance. 
+-  A large number of ports imply less traffic
+-  A switch is a data link layer device. 
+-  The switch can perform error checking before forwarding data, which makes it very efficient as it does not forward packets 
+   that have errors and forward good packets selectively to the correct port only.  
+-  In other words, the switch divides the collision domain of hosts, but the broadcast domain remains the same. 
+_______________________________________________________________________________________________________________________________________________________________
+
+5. ROUTERS – 
+-  A router is a device like a switch that routes data packets based on their IP addresses. 
+-  The router is mainly a Network Layer device. Routers normally connect LANs and WANs and have a dynamically updating 
+   routing table based on which they make decisions on routing the data packets. 
+-  The router divides the broadcast domains of hosts connected through it.
+_______________________________________________________________________________________________________________________________________________________________
+
+6. GATEWAY – 
+-  A gatewayis a passage to connect two networks that may work upon different networking models. 
+-  They work as messenger agents that take data from one system, interpret it, and transfer it to another system. 
+-  Gateways are also called protocol converters and can operate at any network layer. 
+-  Gateways are generally more complex than switches or routers. 
+-  A gateway is also called a protocol converter. 
+_______________________________________________________________________________________________________________________________________________________________
+
+7. BROUTER – 
+-  It is also known as the bridging router is a device that combines features of both bridge and router. 
+-  It can work either at the data link layer or a network layer. 
+-  Working as a router, it is capable of routing packets across networks and working as the bridge, it is capable of filtering local area network traffic. 
+_______________________________________________________________________________________________________________________________________________________________
+
+8. NIC – 
+-  Network interface card is a network adapter that is used to connect the computer to the network. 
+-  It is installed in the computer to establish a LAN.  
+-  It has a unique id that is written on the chip, and it has a connector to connect the cable to it. 
+-  The cable acts as an interface between the computer and the router or modem. 
+-  NIC card is a layer 2 device which means that it works on both the physical and data link layers of the network model. 
+_______________________________________________________________________________________________________________________________________________________________
+
+A diagram to show the connection of all the devices. The router is the parent root.
+
+computer <- bridge <- Hub <- switch <-   ROUTER   -> switch -> Hub -> computer -> bridge -> computer network(any topology connection)
