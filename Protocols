@@ -50,7 +50,7 @@ UDP (User Datagram Protocol) :-  *Not a TCP*
 		Packets can be lost in transmission of data.
 		- UDP is used when some data loss is managable like in video chats where some frame drops are considered normal.
 
--------------------------------------------------------COOKIES-------------------------------------------------------------------
+--------------------------------------------------------COOKIES------------------------------------------------------------------
 
 Cookies are unique strings set by the server that are stored on the client's browser memory.
 These cookies help the server to store the changes/requests that were made previously by the client.
@@ -67,5 +67,33 @@ Third party cookies :-
 these are the websites that are indirectly using the cookie data of the client, like if you allow cookies on a news website and
 that website have ads of other websites then those websites might use your cookie data too, this can lead to privacy hinderance.
 
---------------------------------------------------------EMAIL--------------------------------------------------------------------
+---------------------------------------------------------EMAIL-------------------------------------------------------------------
 
+The Emails are generally transfered by using 2 protocols SMTP (Simple Mail Transfer Protocol) and POP (PostOffice protocol)
+
+-  SMTP is a push protocol and is used to send the mail. 
+-  POP or IMAP (internet message access protocol) is used to retrieve those emails at the receiver’s side.
+
+SMTP :-
+	- SMTP is an application layer protocol. 
+	- The client who wants to send the mail opens a TCP connection to the SMTP server and then sends the mail across the connection. 
+	- The SMTP server is an always-on listening mode. 
+	- As soon as it listens for a TCP connection from any client, the SMTP process initiates a connection. 
+	- It uses port 25. 
+	- After successfully establishing a TCP connection the client process sends the mail instantly.
+	- Message goes from sender's device to sender's SMTP server then to reciever's SMTP server and then to reciever's server.	
+
+POP :-
+	- The e-mail client requests new messages from the e-mail server, and the server “pops” all new messages out for the client.
+	- It supports download and delete functions even when offline.
+	- It requires no mail gateways due to its native nature.
+	- It uses port 110. 
+	- POP can handle email access only while the emails are sent by SMTP.
+	- POP fetches the Email from the reciever's server and delivers it to the reciever's mailbox.
+	- It is not synced with folders like drafts, sent Emails, bins.
+
+IMAP :-
+	- Basically helps to see and manage emails from multiple devices.
+	- Like if an Email is deleted through phone then it will be deleted in the inbox of PC too.
+	
+	
