@@ -9,8 +9,8 @@
 
 - DNS is the IP addresses in the named forms,
 - Each device connected to the Internet has a unique IP address which other machines use to find the device.
-  DNS servers eliminate the need for humans to memorize IP addresses such as 192.168.1.1 (in IPv4), or more complex newer 
-  alphanumeric IP addresses such as 2400:cb00:2048:1::c629:d7a2 (in IPv6).
+  DNS servers eliminate the need for humans to memorize IP addresses such as 192.168.1.1 (in IPv4), 
+  or more complex newer alphanumeric IP addresses such as 2400:cb00:2048:1::c629:d7a2 (in IPv6).
 
 maps.google.com  
     maps    ->  sub domain
