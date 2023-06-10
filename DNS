@@ -1,1 +1,33 @@
 
+- The Domain Name System (DNS) is the phonebook of the Internet. 
+- Humans access information online through domain names, like google.com or espn.com. 
+- Web browsers interact through Internet Protocol (IP) addresses. 
+- DNS translates domain names to IP addresses so browsers can load Internet resources.
+- Maintained by Internet Corporation for Assigned Names and Numbers (ICANN).
+- Operates on Port 53.
+- A domain can never be brought, it can only be rented.
+
+- DNS is the IP addresses in the named forms,
+- Each device connected to the Internet has a unique IP address which other machines use to find the device.
+  DNS servers eliminate the need for humans to memorize IP addresses such as 192.168.1.1 (in IPv4), or more complex newer 
+  alphanumeric IP addresses such as 2400:cb00:2048:1::c629:d7a2 (in IPv6).
+
+maps.google.com  
+    maps    ->  sub domain
+    google  ->  second level domain   (SLD)
+    com     ->  top/root level domain (TLD)
+
+- Multiple databases are there around the world for these 3 categories of domains.
+- .com , .io , .org etc are stored in root DNS servers.
+    
+ -----------------------------------------------------WORKING OF DNS------------------------------------------------------------- 
+
+When we search any website on internet then first it searches the corrosponding IP address of the website in your local
+computer because when we visit a website for the first time then the IP address of it is stored in the computer's cache memory.
+If it is not found in there then it is transfered to the Local DNS server ie. our Internet service provider, the ISP have the
+information of all the websites we have visited even in incognito mode. if not found there then it is transfered to the root 
+server, if it is not found there then it is returned to the ISP and then ISP finally transferes the request to the TLD and then
+the IP address is returned to the ISP and then redirected to the desired website.
+    
+    
+    
