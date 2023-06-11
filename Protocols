@@ -2,8 +2,30 @@ Protocols are sets of rules for message formats and procedures that allow machin
 information. These rules must be followed by each machine involved in the communication in order for the receiving host to be 
 able to understand the message. 
 
+TCP (Transmission Control Protocol) :-
+		- It is designed to send packets across the internet and ensure the successful delivery of data and messages over networks.
+		- It is a transport layer protocol, application layer sends lots of data and TCP breaks it into segments and adds headers,
+		  it may also collect data from the network layer(complex).
+		- It also do the congestion control and sends the packets at a slower rate when the traffic is high.
+		- Takes responsibility of successfull and inorder transmission of data, Timers and sequence numbers comes under TCP.
+		- It is connection oriented.
+		- Supports full duplex, ie both sender and reciever can send data to each other simultaneously.
+		- One TCP connection can only be between 2 computers.
+		
+		# 3 Way Handshake -
+			Step 1 (SYN): 
+			    In the first step, the client wants to establish a connection with a server, so it sends a segment with 
+			    SYN(Synchronize Sequence Number) which informs the server that the client is likely to start communication and 
+			    with what sequence number it starts the segments with.
+			Step 2 (SYN + ACK): 
+			    Server responds to the client request with SYN-ACK signal bits set. Acknowledgement(ACK) signifies the response 
+			    of the segment it received and SYN signifies with what sequence number it is likely to start the segments with.
+			Step 3 (ACK): 
+			    In the final part client acknowledges the response of the server and they both establish a reliable connection with 
+			    which they will start the actual data transfer.
 
-HTTP (HyperText Transfer Protocol) :-
+
+HTTP (HyperText Transfer Protocol) :-   *TCP*
 		- It is the protocol that allows web servers and browsers to exchange data over the web.
 		- It is by default on TCP port 80.
 		- It is stateless means each request is considered as the new request.
@@ -27,17 +49,17 @@ HTTP (HyperText Transfer Protocol) :-
 			500 – 599  ->  Server side error responses 
 			
 			
-DHCP (Dynamic Host Control Protocol) :- 
+DHCP (Dynamic Host Control Protocol) :-  *TCP* 
   		- DHCP is a network protocol that is used to configure network devices to communicate on an IP network.
 		- Allocates IP addresses to the devices connected to your network, also allocates subnet mask and default gateway. 
 
-FTP (File Transfer Protocol) :- 
+FTP (File Transfer Protocol) :-  *TCP* 
 		- FTP is a way to download, upload and transfer files from one location to another on the Internet and between computer systems.
 		- FTP enables the transfer of files back and forth between computers or through the cloud.
 		- Users require an Internet connection in order to execute FTP transfers.
 		- FTP works by opening two connections that link the computers trying to communicate with each other.
 
-SSH (Secure Shell) :- 
+SSH (Secure Shell) :-  *TCP* 
 		- SSH is a method for secure remote login from one computer to another. 
 		- It provides several alternative options for strong authentication, and it protects communications security and integrity 
 		  with strong encryption.
@@ -46,9 +68,21 @@ SSH (Secure Shell) :-
 UDP (User Datagram Protocol) :-  *Not a TCP*
 		- UDP is a communications protocol that is primarily used to establish low-latency and loss-tolerating connections 
 		  between applications on the internet. 
-		- UDP speeds up transmissions by enabling the transfer of data before an agreement is provided by the receiving party.
+		- It doesn't establishes a proper connection before transmission of data.
+		- The transfered data may not be in order.
+		- UDP uses checksums to know if data is corrupted or not but wont fix it.
+		- UDP speeds up transmissions by enabling the transfer of data without the timer checkups.
 		  Packets can be lost in transmission of data.
 		- UDP is used when some data loss is managable like in video chats where some frame drops are considered normal.
+		- A UDP packet is made up of 2 seperate sections, the header section and the data section,
+			The header consists of - 
+			    - Source Port no. of size 2 bytes
+			    - Deastination Port no. of size 2 bytes
+			    - Datagram length of size 2 bytes
+			    - Checksum of size 2 bytes
+			The Data section consists of the data we are sending and the size of the data can be at max 25528 bytes 
+			(2^16 - 2^3).	
+		
 
 NTP (Network Time Protocol) :-
 		- It is used to synchronize the clocks on our computer to one standard time source. 
@@ -80,7 +114,7 @@ The Emails are generally transfered by using 2 protocols SMTP (Simple Mail Trans
 -  SMTP is a push protocol and is used to send the mail. 
 -  POP or IMAP (internet message access protocol) is used to retrieve those emails at the receiver’s side.
 
-SMTP :-
+SMTP :-       *TCP*
 	- SMTP is an application layer protocol. 
 	- The client who wants to send the mail opens a TCP connection to the SMTP server and then sends the mail across the connection. 
 	- The SMTP server is an always-on listening mode. 
@@ -89,7 +123,7 @@ SMTP :-
 	- After successfully establishing a TCP connection the client process sends the mail instantly.
 	- Message goes from sender's device to sender's SMTP server then to reciever's SMTP server and then to reciever's server.	
 
-POP :-
+POP :-        *TCP*
 	- The e-mail client requests new messages from the e-mail server, and the server “pops” all new messages out for the client.
 	- It supports download and delete functions even when offline.
 	- It requires no mail gateways due to its native nature.
@@ -98,8 +132,7 @@ POP :-
 	- POP fetches the Email from the reciever's server and delivers it to the reciever's mailbox.
 	- It is not synced with folders like drafts, sent Emails, bins.
 
-IMAP :-
+IMAP :-      *TCP*
 	- Basically helps to see and manage emails from multiple devices.
 	- Like if an Email is deleted through phone then it will be deleted in the inbox of PC too.
-	
-	
+		
