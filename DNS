@@ -5,6 +5,7 @@
 - DNS translates domain names to IP addresses so browsers can load Internet resources.
 - Maintained by Internet Corporation for Assigned Names and Numbers (ICANN).
 - Operates on Port 53.
+- DNS uses TCP for Zone transfer and UDP for name. 
 - A domain can never be brought, it can only be rented.
 
 - DNS is the IP addresses in the named forms,
