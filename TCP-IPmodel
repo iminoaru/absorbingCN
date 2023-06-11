@@ -19,19 +19,19 @@ _____________________          It is responsible for end-to-end communication an
           V
           
 _____________________         Data recieved from session layer will be distributed into 'segments' and 
-4. Transport Layer            will be transmitted, it also checks data loss. it  iss located on your devices.
+2. Transport Layer            will be transmitted, it also checks data loss. it  iss located on your devices.
 _____________________         Also takes care of traffic control by slowing the rate of packet transmission.
           |
           V
  
 _____________________         Assigns the sender's and reciever's IP addresses to every segment and it
-5. Network Layer              forms an IP packet. It also takes care of packet routing and load balancing.
+3. Network Layer              forms an IP packet. It also takes care of packet routing and load balancing.
 _____________________         
           |
           V
 
 _____________________        When a packet arrives in a network, the DataLink transmit it to the Host using  
-6. DataLink Layer            its MAC address. Responsible for node-node delivery of message.
+4. DataLink Layer            its MAC address. Responsible for node-node delivery of message.
 _____________________
           |
           V
@@ -51,10 +51,27 @@ Diff. b/w network layer and transport layer -
        S2 - transfer the data from sender's network to the reciever's network through network layer.
        S3 - transfer the data from reciever's network to the reciever's app through transport layer.
 
-Application layer  -> HTTP, SSH, NTP 
-Transport layer    -> TCP, UDP
-Network layer      -> IP
-
+Protocols used in each layer :-
+          Application layer  ->  HTTP, SSH, NTP 
+          Transport layer    ->  TCP, UDP
+          Network layer      ->  IP
+          DataLink Layer     ->  PPP, IEEE
+          Physical Layer     ->  Ethernet (IEEE 802.3) Token Ring, RS-232
+          
+Networking devices used in each layer :-
+          Application layer  ->  PC, Phone, Server 
+          Transport layer    ->  Gateways, firewall
+          Network layer      ->  Routers, Bridges
+          DataLink Layer     ->  Bridges, switches, NIC
+          Physical Layer     ->  Hubs, cables, modem , repeaters 
+          
+Type of data in each layer :-
+          Application layer  ->  Raw Data 
+          Transport layer    ->  Segments
+          Network layer      ->  Packets
+          DataLink Layer     ->  Frames
+          Physical Layer     ->  Bits         
+          
 Checksum :-
           It is a method to check if any error like missing segments or corrupted file have taken place while the transmission of data. 
           In checksum the sender's end computes a numerical value according to the number of set or unset bits in a message 
