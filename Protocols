@@ -50,6 +50,12 @@ UDP (User Datagram Protocol) :-  *Not a TCP*
 		Packets can be lost in transmission of data.
 		- UDP is used when some data loss is managable like in video chats where some frame drops are considered normal.
 
+NTP (Network Time Protocol) :-
+		- It is used to synchronize the clocks on our computer to one standard time source. 
+		- It is very useful in situations like bank transactions.
+		- The server can crash very badly if it’s out of sync.
+		- port 123 is used for NTP server communication and NTP clients use port 1023.
+		
 --------------------------------------------------------COOKIES------------------------------------------------------------------
 
 Cookies are unique strings set by the server that are stored on the client's browser memory.
