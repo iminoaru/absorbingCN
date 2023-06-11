@@ -1,9 +1,9 @@
-TCP/IP Protocols are sets of rules for message formats and procedures that allow machines and application programs to exchange 
+Protocols are sets of rules for message formats and procedures that allow machines and application programs to exchange 
 information. These rules must be followed by each machine involved in the communication in order for the receiving host to be 
 able to understand the message. 
 
 
-HTTP (HyperTExt Transfer Protocol) :-
+HTTP (HyperText Transfer Protocol) :-
 		- It is the protocol that allows web servers and browsers to exchange data over the web.
 		- It is by default on TCP port 80.
 		- It is stateless means each request is considered as the new request.
@@ -28,7 +28,7 @@ HTTP (HyperTExt Transfer Protocol) :-
 			
 			
 DHCP (Dynamic Host Control Protocol) :- 
-  	- DHCP is a network protocol that is used to configure network devices to communicate on an IP network.
+  		- DHCP is a network protocol that is used to configure network devices to communicate on an IP network.
 		- Allocates IP addresses to the devices connected to your network, also allocates subnet mask and default gateway. 
 
 FTP (File Transfer Protocol) :- 
@@ -40,14 +40,14 @@ FTP (File Transfer Protocol) :-
 SSH (Secure Shell) :- 
 		- SSH is a method for secure remote login from one computer to another. 
 		- It provides several alternative options for strong authentication, and it protects communications security and integrity 
-		with strong encryption.
+		  with strong encryption.
 		- When a client connects to a server over SSH, the machine can be controlled like a local computer.
 
 UDP (User Datagram Protocol) :-  *Not a TCP*
 		- UDP is a communications protocol that is primarily used to establish low-latency and loss-tolerating connections 
-		between applications on the internet. 
+		  between applications on the internet. 
 		- UDP speeds up transmissions by enabling the transfer of data before an agreement is provided by the receiving party.
-		Packets can be lost in transmission of data.
+		  Packets can be lost in transmission of data.
 		- UDP is used when some data loss is managable like in video chats where some frame drops are considered normal.
 
 NTP (Network Time Protocol) :-
