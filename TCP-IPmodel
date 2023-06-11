@@ -3,38 +3,74 @@ It stands for Transmission Control Protocol/Internet Protocol. The TCP/IP model 
 This model is the practical implementation of the theoritical OSI model.
 
 Session layer and Presentation layer comes under the Application layer in this model.
-
 3G, 4G, LTE are examples of implementations of TCP/IP model.
+The basic difference between TCP and IP is that IP finds the destination of the mail and TCP has the work to 
+send and receive the mail. IP is required by TCP only.
+
+UDP is another protocol, which does not require IP to communicate with another computer. 
+
 __________________________________________________________________________________________________________________________________
 
 
 _____________________          Implemented in software. This layer produce the data, which has to be                         
 1. Application Layer           transferred over the network. Also acts as a gateway to access network.
-_____________________
+_____________________          It is responsible for end-to-end communication and error-free delivery of data.
           |
           V
           
-_____________________         Comverts the message from application layer to machine code.
-2. Transport Layer            Also compresses, encrypts, decrypts and translates the message.
-_____________________         
+_____________________         Data recieved from session layer will be distributed into 'segments' and 
+4. Transport Layer            will be transmitted, it also checks data loss. it  iss located on your devices.
+_____________________         Also takes care of traffic control by slowing the rate of packet transmission.
           |
           V
  
-_____________________         Sets up and manages the connections for the transmissions and later on
-3. Network Layer              terminates the connections. Authinticates and Authorizes.
+_____________________         Assigns the sender's and reciever's IP addresses to every segment and it
+5. Network Layer              forms an IP packet. It also takes care of packet routing and load balancing.
 _____________________         
           |
           V
 
-_____________________         Data recieved from session layer will be distributed into 'segments' and 
-4. DataLink Layer             will be transmitted, it also checks data loss.
+_____________________        When a packet arrives in a network, the DataLink transmit it to the Host using  
+6. DataLink Layer            its MAC address. Responsible for node-node delivery of message.
 _____________________
           |
           V
 
-_____________________         Assigns the sender's and reciever's IP addresses to every segment and it
-5. Physical Layer             forms an IP packet. It also takes care of packet routing and load balancing.
+_____________________         This layer is responsible for generating the data and requesting connections.                              
+5. Physical Layer             It acts on behalf of the sender and the Network Access layer on the behalf of the receiver.
 _____________________
 
 
 __________________________________________________________________________________________________________________________________
+
+Diff. b/w network layer and transport layer - 
+    The work of network layer is to transfer the data across diffferent networks(different devices) whereas the work of
+    transport layer is to transfer the data from that network to the particular application that is responsible for 
+    recieving and sending the message, Ex Whatsapp, telegram.
+       S1 - transfer the data from sender's app to the sender's network through transport layer.
+       S2 - transfer the data from sender's network to the reciever's network through network layer.
+       S3 - transfer the data from reciever's network to the reciever's app through transport layer.
+
+Application layer  -> HTTP, SSH, NTP 
+Transport layer    -> TCP, UDP
+Network layer      -> IP
+
+Checksum :-
+          It is a method to check if any error like missing segments or corrupted file have taken place while the transmission of data. 
+          In checksum the sender's end computes a numerical value according to the number of set or unset bits in a message 
+          and sends it along with each message frame. At the receiver's end, the same checksum function (formula) is applied to the 
+          message frame to retrieve the numerical value. If the numeric value at the reciever's side matches with the value at the
+          sender's side then the data is successfully transmitted without any loss.
+
+Timers :-
+          A timer is a parameter that specifies the number of seconds that a Process waits on a TCP or UDP data read before the 
+          Process is cancelled and put in timer retry status. when the packets are transfered then to know if the packet is recieved 
+          or not we set a timer. A timer starts when the packet is sent and stops when the signal from reciever is recieved, this
+          timer starts and stops for each packet transfer. When a packet is not reciever then the recieved signal is not sent so the
+          timer expires and then it resends the packet. Now if the packet is recieved but the recieved signal is not sent then the 
+          timer will expire and packet will be sent again but now the same packet is sent twice, this could result in server and network
+          crash as the same packet is being transfered many times, to solve this each Packet is assigned a sequence number and the same 2
+          sequence number packets can't be recieved and if recieved then the recieved signal is automatically sent to the timer.
+          The number of seconds can range from 0–32767. The default value is 300.
+
+
