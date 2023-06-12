@@ -72,14 +72,14 @@ Type of data in each layer :-
           DataLink Layer     ->  Frames
           Physical Layer     ->  Bits         
           
-Checksum :-
+Checksum :- (Transport Layer)
           It is a method to check if any error like missing segments or corrupted file have taken place while the transmission of data. 
           In checksum the sender's end computes a numerical value according to the number of set or unset bits in a message 
           and sends it along with each message frame. At the receiver's end, the same checksum function (formula) is applied to the 
           message frame to retrieve the numerical value. If the numeric value at the reciever's side matches with the value at the
           sender's side then the data is successfully transmitted without any loss.
 
-Timers :-
+Timers :- (Transport Layer)
           A timer is a parameter that specifies the number of seconds that a Process waits on a TCP or UDP data read before the 
           Process is cancelled and put in timer retry status. when the packets are transfered then to know if the packet is recieved 
           or not we set a timer. A timer starts when the packet is sent and stops when the signal from reciever is recieved, this
@@ -90,4 +90,15 @@ Timers :-
           sequence number packets can't be recieved and if recieved then the recieved signal is automatically sent to the timer.
           The number of seconds can range from 0–32767. The default value is 300.
 
+Hop-by-Hop Transport :- (Network Layer)
+          It is a dynamic method of transmission, Each router maintains a routing table of the next-hop neighbor for each destination, and incoming 
+          packets are routed based on this table. If there is a failure in the network, the intradomain routing protocol (OSPF or IS-IS) operates in a 
+          distributed manner and updates these routing tables at each router within the domain. The data transmits from router to router till destination.
+          A routing Table consists of ever destination address. A forwarding table consists of only one destination where you want to send the data to, 
+          it comes under routing table and both these tables are inside the router.
+          All this network between the routers and these tables is built by the control plane, the network behaves as a graph where the routers act as
+          nodes and the connections between the routers act as the edges. 
+          2 Types of routings are - 
+                    Static Routing  - Done manually
+                    Dynamic Routing - Uses algorithms like Dijkstra, Bellman Ford to create the tables.
 
