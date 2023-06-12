@@ -23,7 +23,42 @@ TCP (Transmission Control Protocol) :-
 			Step 3 (ACK): 
 			    In the final part client acknowledges the response of the server and they both establish a reliable connection with 
 			    which they will start the actual data transfer.
+_______________________________________________________________________________________________________________________________________________________________
 
+IP (Internet Protocol) :-
+		- Internet Protocols are a set of rules that governs the communication and exchange of data over the internet.
+		- IP is considered to be connectionless because it does not establish a session with a remote computer before sending data. 
+		- Data sent via connectionless methods are called datagrams. 
+		- An IP packet can be lost, delayed, duplicated, or delivered out of sequence and there is no attempt to recover from these errors.
+		- It is a network layer protocol.
+	
+	IP addresses -
+		- A IPv4 address is a 32 bit address divided in 4 parts that lie between 0-255 seperated by .
+		- 255.123.43.6 is a valid IPv4 address.
+		- The first 3 parts of an IPv4 address is called network address(subnet ID) and the last part is called device address(Host ID).
+		- IETF provides the IP addresses to the internet service provides on the bases of region not on basis of class.
+		
+		
+	Clasees of IP addresses -
+		A	0.0.0.0    -  127.255.255.255
+		B	128.0.0.0  -  191.255.255.255
+		C	192.0.0.0  -  223.255.255.255
+		D	224.0.0.0  -  239.255.255.255
+		E	240.0.0.0  -  255.255.255.255
+
+	Subnet masking -
+		Every device has an IP address with two pieces: the client or host address and the server or network address. 
+		IP addresses are either configured by a DHCP server or manually configured (static IP addresses). 
+		The subnet mask splits the IP address into the host and network addresses, thereby defining which part of the 
+		IP address belongs to the device and which part belongs to the network.
+		The device called a gateway or default gateway connects local devices to other networks.
+	
+	Loopback addresses -
+		A loopback address has been built into the IP domain system in order to allow for a device to send and receive its own data packets.
+		Loopback addresses can be useful in various kinds of analysis like testing and debugging, or in allowing routers to communicate in 
+		specific ways. A simple way of describing how using a loopback address works is that a data packet will get sent through a network and 
+		routed back to the same device where it originated. In IPv4, 127.0.0.1 is the most commonly used loopback address.
+_______________________________________________________________________________________________________________________________________________________________
 
 HTTP (HyperText Transfer Protocol) :-   *TCP*
 		- It is the protocol that allows web servers and browsers to exchange data over the web.
@@ -47,28 +82,33 @@ HTTP (HyperText Transfer Protocol) :-   *TCP*
 			300 – 399  ->  Redirection messages 
 			400 – 499  ->  Client side error responses 
 			500 – 599  ->  Server side error responses 
-			
+_______________________________________________________________________________________________________________________________________________________________			
 			
 DHCP (Dynamic Host Control Protocol) :-  *TCP* 
   		- DHCP is a network protocol that is used to configure network devices to communicate on an IP network.
 		- Allocates IP addresses to the devices connected to your network, also allocates subnet mask and default gateway. 
+		- DHCP helps in managing the entire process automatically and centrally. It helps in maintaining a unique IP Address for a host using the server.
+_______________________________________________________________________________________________________________________________________________________________
 
 FTP (File Transfer Protocol) :-  *TCP* 
 		- FTP is a way to download, upload and transfer files from one location to another on the Internet and between computer systems.
 		- FTP enables the transfer of files back and forth between computers or through the cloud.
 		- Users require an Internet connection in order to execute FTP transfers.
 		- FTP works by opening two connections that link the computers trying to communicate with each other.
+_______________________________________________________________________________________________________________________________________________________________
 
 SSH (Secure Shell) :-  *TCP* 
 		- SSH is a method for secure remote login from one computer to another. 
 		- It provides several alternative options for strong authentication, and it protects communications security and integrity 
 		  with strong encryption.
 		- When a client connects to a server over SSH, the machine can be controlled like a local computer.
+_______________________________________________________________________________________________________________________________________________________________
 
 UDP (User Datagram Protocol) :-  *Not a TCP*
 		- UDP is a communications protocol that is primarily used to establish low-latency and loss-tolerating connections 
 		  between applications on the internet. 
 		- It doesn't establishes a proper connection before transmission of data.
+		- It is faster than TCP.
 		- The transfered data may not be in order.
 		- UDP uses checksums to know if data is corrupted or not but wont fix it.
 		- UDP speeds up transmissions by enabling the transfer of data without the timer checkups.
@@ -82,7 +122,7 @@ UDP (User Datagram Protocol) :-  *Not a TCP*
 			    - Checksum of size 2 bytes
 			The Data section consists of the data we are sending and the size of the data can be at max 25528 bytes 
 			(2^16 - 2^3).	
-		
+_______________________________________________________________________________________________________________________________________________________________		
 
 NTP (Network Time Protocol) :-
 		- It is used to synchronize the clocks on our computer to one standard time source. 
