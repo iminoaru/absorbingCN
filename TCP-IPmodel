@@ -102,3 +102,28 @@ Hop-by-Hop Transport :- (Network Layer)
                     Static Routing  - Done manually
                     Dynamic Routing - Uses algorithms like Dijkstra, Bellman Ford to create the tables.
 
+Middleboxes :- (both network and transport layer)
+          Firewall -
+                    There are 2 firewalls setup, one is on global network and the other is on your own network.
+                    A firewall filters out IP packets based on various criterias , some are:
+                              - IP Addresses
+                              - Port numbers
+                              - Modified packets
+                              - Set flags
+                              - Protocols
+                    2 types of firewalls are stateless and stateful(more effecient).          
+
+          NAT (Network Address Translation) -
+                    The idea of NAT is to allow multiple devices to access the Internet through a single public address. To achieve this, the translation of a
+                    private IP address to a public IP address is required. Network Address Translation (NAT) is a process in which one or more local IP address 
+                    is translated into one or more Global IP address and vice versa in order to provide Internet access to the local hosts. Also, it does the 
+                    translation of port numbers i.e. masks the port number of the host with another port number, in the packet that will be routed to the destination. 
+                    It then makes the corresponding entries of IP address and port number in the NAT table. NAT generally operates on a router or firewall. 
+
+ARP cache (Address Resolution Protocol) :- (DataLink Layer)
+          An ARP cache is a collection of Address Resolution Protocol entries that are created when an IP address is resolved to a MAC address. 
+          It has the disadvantage of potentially being used by hackers and cyber attackers. An ARP cache helps the attackers hide behind a fake IP address.
+          ARP cache is a repository for data that is used to connect an IP address to a Media Access Control (MAC) address for a physical machine or device in
+          a local network. The ARP cache can hold data for both wireless and Ethernet routing, and helps to route packets to the right endpoint.
+
+
