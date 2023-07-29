@@ -1,2 +1,2 @@
-echo "Greetings";
-echo "Computer networks is fun LMAO";
+echo "Greetings"
+echo "Computer networks is fun LMAO"
